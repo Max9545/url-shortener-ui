@@ -18,7 +18,7 @@ class UrlForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     postUrls(this.state.title, this.state.urlToShorten)
-    .then(this.props.setURLs())
+    .then(() => this.props.setURLs())
     this.clearInputs();
   }
 
@@ -30,6 +30,7 @@ class UrlForm extends Component {
     return (
       <form>
         <input
+          className='title-input'
           type='text'
           placeholder='Title...'
           name='title'
@@ -38,6 +39,7 @@ class UrlForm extends Component {
         />
 
         <input
+          className='url-input'
           type='text'
           placeholder='URL to Shorten...'
           name='urlToShorten'
