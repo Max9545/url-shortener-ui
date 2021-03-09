@@ -29,7 +29,7 @@ describe('URL Shortner', () => {
     .get('.url-input')
     .type('https://cdn0.wideopenpets.com/wp-content/uploads/2019/10/Fish-Names-770x405.png')
     .get('button').click()
-    .get('div.url').last()
+    .get('div.url').last().should('contain', 'http://localhost:3001/useshorturl/21')
   })
 })
 
