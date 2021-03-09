@@ -15,4 +15,5 @@ export const postUrls = (urlTitle, longURL ) => {
       long_url:longURL
     })
   })
+  .then(res => res.json())
 }
